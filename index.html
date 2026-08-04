@@ -415,46 +415,7 @@
 
 
 
-    <!--Test Course-->
-<form id="appointmentForm">
-
-    <div class="row g-3">
-
-        <div class="col-sm-6">
-            <div class="form-floating">
-                <input type="text" class="form-control border-0" id="gname" placeholder="Your Name" required>
-                <label for="gname">Your Name</label>
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-floating">
-                <input type="text" class="form-control border-0" id="cname" placeholder="Course Type" required>
-                <label for="cname">Course Type</label>
-            </div>
-        </div>
-
-        <div class="col-12">
-            <div class="form-floating">
-                <textarea class="form-control border-0"
-                          id="message"
-                          placeholder="Message"
-                          style="height:100px"></textarea>
-                <label for="message">Message</label>
-            </div>
-        </div>
-
-        <div class="col-12">
-            <button class="btn btn-dark w-100 py-3" type="submit">
-                Send via WhatsApp
-            </button>
-        </div>
-
-    </div>
-
-</form>
-
-    <!Test Course End-->
+    
 
 
     <!-- Features Start -->
@@ -779,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const message = form.querySelector('textarea').value;
 
         const text =
-            "🚗 New Driving Lesson Enquiry\n\n" +
+            "*New Driving Lesson Enquiry*\n\n" +
             "Name: " + name + "\n" +
             "Course Type: " + course + "\n\n" +
             "Message:\n" + message;
