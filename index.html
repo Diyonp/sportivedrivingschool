@@ -82,6 +82,7 @@
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#" class="nav-item nav-link">Courses</a>
+                <!--Dropdown>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -92,6 +93,7 @@
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
+                <Dropdown-->
                 <a href="#" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get Started<i class="fa fa-arrow-right ms-3"></i></a>
@@ -291,6 +293,7 @@
 
 
     <!-- Courses Start -->
+    <section id="courses">
     <div class="container-xxl courses my-6 py-6 pb-0">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
@@ -355,6 +358,7 @@
                         </div>
                     </div>
                 </div>
+                </section>
 
                 <!Make appoinment test>
                 <div class="col-lg-8 my-6 mb-0 wow fadeInUp" data-wow-delay="0.1s">
@@ -741,9 +745,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const text =
             "*New Driving Lesson Enquiry*\n\n" +
-            "Name: " + name + "\n" +
-            "Course Type: " + course + "\n\n" +
-            "Message:\n" + message;
+            "*Name:* " + name + "\n" +
+            "*Course Type:* " + course + "\n" +
+            "*Message:*\n" + message;
 
         const url =
             "https://wa.me/447956370903?text=" +
