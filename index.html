@@ -755,27 +755,30 @@
 </style>
 
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+    const form = document.getElementById("appointmentForm");
+
+    form.addEventListener("submit", function (e) {
 
         e.preventDefault();
 
-        var name = document.getElementById("gname").value.trim();
-        var course = document.getElementById("cname").value.trim();
-        var message = document.getElementById("message").value.trim();
+        const name = form.querySelector('input[placeholder="Your Name"]').value;
+        const course = form.querySelector('input[placeholder="Course Type"]').value;
+        const message = form.querySelector('textarea').value;
 
-        var whatsappText =
-            "🚗 New Driving Lesson Enquiry%0A%0A" +
-            "Name: " + name + "%0A" +
-            "Course Type: " + course + "%0A%0A" +
-            "Message:%0A" + message;
+        const text =
+            "🚗 New Driving Lesson Enquiry\n\n" +
+            "Name: " + name + "\n" +
+            "Course Type: " + course + "\n\n" +
+            "Message:\n" + message;
 
-        window.open(
-            "https://wa.me/447956370903?text=" + whatsappText,
-            "_blank"
-        );
+        const url =
+            "https://wa.me/447956370903?text=" +
+            encodeURIComponent(text);
+
+        window.open(url, "_blank");
     });
 
 });
